@@ -1,0 +1,21 @@
+{
+  "name": "termitalk",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "client": "bun run ./client/index.ts",
+    "server": "bun run ./server/index.ts",
+    "buildw": "rustc --crate-type cdylib src/window.rs -o ./client/libwindow.so"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "colorette": "^2.0.20",
+    "consola": "^3.2.3"
+  }
+}
